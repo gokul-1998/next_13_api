@@ -9,7 +9,7 @@ export async function GET(request, { params }) {
   return NextResponse.json({ product }, { status: 200 });
 }
 
-export async function POST(request, { params }) {
+export async function PUT(request, { params }) {
   const { id } = params;
   const { title, description, price } = await request.json();
   await connectMongoDB();
